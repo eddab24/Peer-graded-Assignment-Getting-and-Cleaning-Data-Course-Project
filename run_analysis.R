@@ -5,8 +5,6 @@ library(dplyr)
 
 filename <- "getdata_projectfiles_UCI HAR Dataset.zip"
 
-# Checking if archieve already exists.
-
   fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
   download.file(fileURL, filename, method="curl")
   
@@ -54,4 +52,5 @@ ResultData <- TidyData %>%
 write.table(ResultData, "TidyData.txt", row.name=FALSE)
 
 str(ResultData)
+
 
